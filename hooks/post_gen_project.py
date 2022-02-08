@@ -25,18 +25,24 @@ _____':::::_____________________________________\__\_________________________
 If you have not done so already, create a conda environment for your new 
 project with:
 
-cd {{cookiecutter.repo_name}}
-conda create --name {{cookiecutter.repo_name}} python=3.8
-conda activate {{cookiecutter.repo_name}}
-conda env export > environment.yml
+>> cd {{cookiecutter.repo_name}}
+>> conda create --name {{cookiecutter.repo_name}} python=3.9
+>> conda activate {{cookiecutter.repo_name}}
+>> conda env export > environment.yml
 
 Install your new project in your local conda environment with:
 
-pip install -e .
+>> pip install -e .
 
-You will need to manually add data to .gitignore to prevent it from syncing to
-version control.
+Don't forget to sync to GitHub by doing the following:
 
-Don't forget to sync to GitHub. Have fun!
+>> git init
+>> git add --all
+>> git commit -m "First commit"
+>> git branch -M main
+>> git remote add origin https://[remote repository URL]
+>> git push -u origin main
+
+Have fun!
 """
 print(help)
