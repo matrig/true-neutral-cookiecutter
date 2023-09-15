@@ -31,6 +31,7 @@ conda create --name {{cookiecutter.repo_name}} python=3.9
 
 conda activate {{cookiecutter.repo_name}}
 conda env export > environment.yml
+# OR conda env export --from-history > environment.yml
 
 Install your new project in your local conda environment with:
 
